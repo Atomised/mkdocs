@@ -305,7 +305,7 @@ def build_pages(config, dump_json=False, dirty=False):
     site_navigation.url_context.base_path = utils.urlparse(config['site_url']).path
     build_template('404.html', env, config, site_navigation)
     # Reset nav behavior to the default
-    site_navigation.url_context.force_abs_urls = False
+    # site_navigation.url_context.force_abs_urls = False
     site_navigation.url_context.base_path = default_base
 
     if not build_template('search.html', env, config, site_navigation):
